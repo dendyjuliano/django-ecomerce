@@ -12,14 +12,14 @@ class Command(BaseCommand):
 
         #logic to rename project
 
-        files_to_rename = ['src/settings/base.py','src/wsgi.py','manage.py']
-        folder_to_rename = 'src'
+        files_to_rename = ['demo/settings/base.py','demo/wsgi.py','manage.py']
+        folder_to_rename = 'demo'
 
         for f in files_to_rename:
             with open(f,'r') as file:
                 filedata = file.read()
 
-            filedata = filedata.replace('src',new_project_name)
+            filedata = filedata.replace('demo',new_project_name)
 
             with open(f,'w') as file:
                 file.write(filedata)
