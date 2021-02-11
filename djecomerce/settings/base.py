@@ -16,7 +16,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
+
+    'crispy_forms',
+
     'core',
 ]
 
@@ -61,7 +63,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-MEDIA_URL = '/media/' 
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # Auth
@@ -71,3 +73,9 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+
+# CRISPY FORMS
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
